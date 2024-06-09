@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  orchestrator:
+    image: orchestrator/orchestrator
+    container_name: orchestrator
+    hostname: orchestrator
+    networks:
+      mybridge:
+        aliases:
+          - orchestrator
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./etc/orchestrator.conf.json:/etc/orchestrator.conf.json
+
+networks:
+  mybridge:
+    external: true

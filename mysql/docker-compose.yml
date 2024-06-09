@@ -1,0 +1,57 @@
+version: '3.8'
+
+networks:
+  mybridge:
+    driver: bridge
+
+services:
+  mysql-001:
+    image: percona:5.7.30
+    container_name: mysql-001
+    hostname: mysql-001
+    networks:
+      mybridge:
+        aliases:
+          - mysql-001
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./001/data:/var/lib/mysql
+      - ./002/log:/var/log/mysql
+      - ./003/conf:/etc/percona-server.conf.d
+    environment:
+      MYSQL_ROOT_PASSWORD: "root"
+
+  mysql-002:
+    image: percona:5.7.30
+    container_name: mysql-002
+    hostname: mysql-002
+    networks:
+      mybridge:
+        aliases:
+          - mysql-002
+    ports:
+      - "3307:3306"
+    volumes:
+      - /db/002/data:/var/lib/mysql
+      - /db/002/log:/var/log/mysql
+      - /db/002/conf:/etc/percona-server.conf.d
+    environment:
+      MYSQL_ROOT_PASSWORD: "root"
+
+  mysql-003:
+    image: percona:5.7.30
+    container_name: mysql-003
+    hostname: mysql-003
+    networks:
+      mybridge:
+        aliases:
+          - mysql-003
+    ports:
+      - "3308:3306"
+    volumes:
+      - /db/003/data:/var/lib/mysql
+      - /db/003/log:/var/log/mysql
+      - /db/003/conf:/etc/percona-server.conf.d
+    environment:
+      MYSQL_ROOT_PASSWORD: "root"

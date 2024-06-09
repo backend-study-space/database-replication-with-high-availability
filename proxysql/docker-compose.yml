@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  proxysql:
+    image: proxysql/proxysql
+    container_name: proxysql
+    hostname: proxysql
+    networks:
+      mybridge:
+        aliases:
+          - proxysql
+    ports:
+      - "16032:6032"
+      - "16033:6033"
+    volumes:
+      - ./proxysql/data:/var/lib/proxysql
+      - ./proxysql/conf/proxysql.cnf:/etc/proxysql.cnf
+
+networks:
+  mybridge:
+    external: true
