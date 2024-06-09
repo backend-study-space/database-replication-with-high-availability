@@ -1,4 +1,4 @@
-package com.example.proxysql_ha;
+package com.example.proxysql.ha;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

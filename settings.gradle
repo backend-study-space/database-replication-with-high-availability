@@ -1,1 +1,3 @@
 rootProject.name = 'proxysql-ha'
+include 'sample-api'
+
