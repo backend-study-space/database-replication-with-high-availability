@@ -17,8 +17,9 @@ services:
       - "3306:3306"
     volumes:
       - ./001/data:/var/lib/mysql
-      - ./002/log:/var/log/mysql
-      - ./003/conf:/etc/percona-server.conf.d
+      - ./001/log:/var/log/mysql
+      - ./001/conf:/etc/percona-server.conf.d
+      - ./001/init/:/docker-entrypoint-initdb.d/
     environment:
       MYSQL_ROOT_PASSWORD: "root"
 
@@ -33,9 +34,10 @@ services:
     ports:
       - "3307:3306"
     volumes:
-      - /db/002/data:/var/lib/mysql
-      - /db/002/log:/var/log/mysql
-      - /db/002/conf:/etc/percona-server.conf.d
+      - ./002/data:/var/lib/mysql
+      - ./002/log:/var/log/mysql
+      - ./002/conf:/etc/percona-server.conf.d
+      - ./002/init/:/docker-entrypoint-initdb.d/        
     environment:
       MYSQL_ROOT_PASSWORD: "root"
 
@@ -50,8 +52,9 @@ services:
     ports:
       - "3308:3306"
     volumes:
-      - /db/003/data:/var/lib/mysql
-      - /db/003/log:/var/log/mysql
-      - /db/003/conf:/etc/percona-server.conf.d
+      - ./003/data:/var/lib/mysql
+      - ./003/log:/var/log/mysql
+      - ./003/conf:/etc/percona-server.conf.d
+      - ./003/init/:/docker-entrypoint-initdb.d/        
     environment:
       MYSQL_ROOT_PASSWORD: "root"
