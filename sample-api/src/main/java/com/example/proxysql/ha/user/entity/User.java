@@ -1,4 +1,4 @@
-package com.example.proxysql.ha.domain;
+package com.example.proxysql.ha.user.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
