@@ -1,6 +1,6 @@
 package com.example.proxysql.ha.service;
 
-import com.example.proxysql.ha.config.service.KafkaConsumerService;
+import com.example.proxysql.ha.global.service.KafkaConsumerService;
 import com.example.proxysql.ha.repository.JdbcRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

@@ -1,6 +1,6 @@
-package com.example.proxysql.ha.config.kafka;
+package com.example.proxysql.ha.global.config;
 
-import com.example.proxysql.ha.dto.PostDto;
+import com.example.proxysql.ha.global.dto.PostDto;
 import org.apache.kafka.common.serialization.StringSerializer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

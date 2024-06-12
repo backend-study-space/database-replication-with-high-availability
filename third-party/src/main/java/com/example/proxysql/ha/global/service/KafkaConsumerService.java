@@ -1,4 +1,4 @@
-package com.example.proxysql.ha.config.service;
+package com.example.proxysql.ha.global.service;
 
 import com.example.proxysql.ha.dto.PostDto;
 import lombok.Getter;

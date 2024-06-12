@@ -1,7 +1,7 @@
 package com.example.proxysql.ha.service;
 
-import com.example.proxysql.ha.dto.PostDto;
-import com.example.proxysql.ha.config.service.MessageQueueService;
+import com.example.proxysql.ha.global.dto.PostDto;
+import com.example.proxysql.ha.global.service.MessageQueueService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

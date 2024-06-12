@@ -1,6 +1,6 @@
-package com.example.proxysql.ha.config.service;
+package com.example.proxysql.ha.global.service;
 
-import com.example.proxysql.ha.dto.PostDto;
+import com.example.proxysql.ha.global.dto.PostDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;

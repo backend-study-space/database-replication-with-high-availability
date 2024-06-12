@@ -9,4 +9,5 @@ spring:
     url: jdbc:mysql://127.0.0.1:16033/testdb?characterEncoding=UTF-8&serverTimezone=UTC
     username: root
     password: root
-
+server:
+  port: 8081
