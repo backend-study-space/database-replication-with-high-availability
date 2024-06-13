@@ -1,7 +1,7 @@
 package com.example.proxysql.ha.api;
 
-import com.example.proxysql.ha.global.dto.PostDto;
 import com.example.proxysql.ha.service.PostService;
+import core.dto.PostDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

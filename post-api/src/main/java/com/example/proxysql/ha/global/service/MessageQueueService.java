@@ -1,7 +1,6 @@
 package com.example.proxysql.ha.global.service;
 
-
-import com.example.proxysql.ha.global.dto.PostDto;
+import core.dto.PostDto;
 
 public interface MessageQueueService {
 

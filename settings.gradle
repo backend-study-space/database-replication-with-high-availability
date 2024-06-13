@@ -1,4 +1,5 @@
 rootProject.name = 'proxysql-ha'
 include 'post-api'
+include 'core'
 include 'common'
-include 'third-party'
+include 'consumer'

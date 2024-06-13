@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
-@SpringBootApplication(scanBasePackages = {"common"})
+@SpringBootApplication(scanBasePackages = {"common", "core"})
 @EntityScan("common")
 @EnableScheduling
 public class ThirdPartyApplication {
