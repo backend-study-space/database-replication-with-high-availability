@@ -3,7 +3,12 @@ POST localhost:8080/api/post
 Content-Type: application/json
 
 {
-  "id": 1,
-  "contents": "content",
-  "image": "image"
+  "userId": 2,
+  "contents": "asd"
 }
+
+###
+DELETE 0.0.0.0:8080/api/post
+Content-Type: application/json
+
+[1]

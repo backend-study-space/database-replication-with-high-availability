@@ -2,6 +2,8 @@ bootJar { enabled = false }
 jar { enabled = true }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation "com.fasterxml.jackson.core:jackson-core:2.9.9"
+    implementation "com.fasterxml.jackson.core:jackson-annotations:2.9.9"
+    implementation "com.fasterxml.jackson.core:jackson-databind:2.9.9"
     implementation 'org.springframework.kafka:spring-kafka'
 }

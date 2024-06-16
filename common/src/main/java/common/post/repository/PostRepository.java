@@ -1,4 +1,4 @@
-package com.example.proxysql.ha.repository;
+package common.post.repository;
 
 import common.post.entity.Post;
 import org.springframework.data.jpa.repository.JpaRepository;

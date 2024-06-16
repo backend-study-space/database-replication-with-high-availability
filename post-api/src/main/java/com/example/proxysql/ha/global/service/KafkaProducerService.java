@@ -1,20 +1,18 @@
 package com.example.proxysql.ha.global.service;
 
-import core.dto.PostDto;
+import com.example.proxysql.ha.global.Message;
 import lombok.RequiredArgsConstructor;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-public class KafkaProducerService implements MessageQueueService {
+public class KafkaProducerService<T> implements MessageQueueService<T> {
 
-    private final String TOPIC = "my_topic";
-
-    private final KafkaTemplate<String, PostDto> kafkaTemplate;
+    private final KafkaTemplate<String, T> kafkaTemplate;
 
     @Override
-    public void send(PostDto postDto) {
-        kafkaTemplate.send(TOPIC, postDto);
+    public void send(Message<T> message) {
+        kafkaTemplate.send(message.topic().name(), message.object());
     }
 }
