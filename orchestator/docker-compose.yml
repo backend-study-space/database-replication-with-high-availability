@@ -1,12 +1,12 @@
-version: '3.8'
+version: '3.0'
 
 services:
   orchestrator:
-    image: orchestrator/orchestrator
+    image: openarkcode/orchestrator
     container_name: orchestrator
     hostname: orchestrator
     networks:
-      mybridge:
+      mysql_mybridge:
         aliases:
           - orchestrator
     ports:
@@ -15,5 +15,5 @@ services:
       - ./etc/orchestrator.conf.json:/etc/orchestrator.conf.json
 
 networks:
-  mybridge:
+  mysql_mybridge:
     external: true
